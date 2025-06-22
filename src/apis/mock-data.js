@@ -7,8 +7,8 @@
 export const mockData = {
   board: {
     _id: 'board-id-01',
-    title: 'TrungQuanDev MERN Stack Board',
-    description: 'Pro MERN stack Course',
+    title: 'toan van fe',
+    description: 'vantoan',
     type: 'public', // 'private'
     ownerIds: [], // Những users là Admin của board
     memberIds: [], // Những users là member bình thường của board
@@ -25,8 +25,8 @@ export const mockData = {
             boardId: 'board-id-01',
             columnId: 'column-id-01',
             title: 'Title of card 01',
-            description: 'Markdown Syntax (sẽ ở khóa nâng cao nhé)',
-            cover: 'https://trungquandev.com/wp-content/uploads/2022/07/fair-mern-stack-advanced-banner-trungquandev.jpg',
+            description: 'Markdown Syntax',
+            cover: 'https://pin.it/7f4tyomS8https://i.pinimg.com/736x/bf/ba/4d/bfba4df228e5639b62dce1aa764ecdf0.jpg',
             memberIds: ['test-user-id-01'],
             comments: ['test comment 01', 'test comment 02'],
             attachments: ['test attachment 01', 'test attachment 02', 'test attachment 03']
