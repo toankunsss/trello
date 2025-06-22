@@ -17,13 +17,15 @@ function Card( { card } ) {
     listeners,
     setNodeRef,
     transform,
-    transition
+    transition,
+    isDragging
   } = useSortable({ id: card._id, data: { ...card } })
 
   const dntKitCardStyle = {
     // touchAction: 'none',
     transform: CSS.Translate.toString(transform),
-    transition
+    transition,
+    opacity: isDragging ? 0.5 : undefined
   }
 
 
@@ -39,8 +41,12 @@ function Card( { card } ) {
       sx={{
         cursor: 'pointer',
         boxShadow: '0 1px 1px rgba(0, 0, 0, 0.2)',
-        overflow: 'unset'
-      }}>
+        opacity: card.FE_PlaceholderCard ? 0 : 1,
+        minHeight: card.FE_PlaceholderCard ? '60px' : 'auto',
+        pointerEvents: card.FE_PlaceholderCard ? 'none' : 'auto',
+        visibility: card.FE_PlaceholderCard ? 'hidden' : 'visible'
+      }}
+    >
       { card?.cover &&
         <CardMedia
           sx={{ height: 140 }}
